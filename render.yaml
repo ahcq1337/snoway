@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: snoway
+    env: node
+    plan: free
+    buildCommand: |
+      apt-get update && apt-get install -y python3 g++ make
+      npm install
+    startCommand: node index.js
